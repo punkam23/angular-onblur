@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+{{this.myModel}}<br>
+<input type="text" [(ngModel)]="myModel" (blur)="onBlurMethod()">
+<br>
+<p></p>
+<input type="text" [disabled]="!(isUserallow$ | async)"
+[(ngModel)]="username"><br>
+<button *ngIf="isUserallow$ | async" type="button">Click Me!</button>
